@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        echo "SCM connected successfully : part 2"
+        echo "SCM connected successfully : part 3"
       }
     }
   }

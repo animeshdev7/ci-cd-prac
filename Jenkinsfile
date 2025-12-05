@@ -2,10 +2,16 @@ pipeline {
   agent any
 
   stages {
-    stage('Test') {
-      steps {
-        echo "SCM connected successfully : part 3"
-      }
-    }
+     stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Maven Build') {
+            steps {
+                sh 'mvn -version'
+            }
+        }
   }
 }
